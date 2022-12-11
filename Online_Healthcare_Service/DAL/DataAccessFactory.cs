@@ -40,10 +40,6 @@ namespace DAL
         {
             return new HospitalRepo();
         }
-        public static IAuth AuthDataAccess()
-        {
-            return new AdminRepo();
-        }
 
     }
 }

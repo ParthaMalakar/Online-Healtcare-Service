@@ -89,19 +89,6 @@ namespace ONLINE_HEALTHCARE_.Controllers
                     }
                 );
         }
-        [Route("api/hospital/{id}/Doctor")]
-        [HttpGet]
-        public HttpResponseMessage GetwithDoctor(int id)
-        {
-            try
-            {
-                return Request.CreateResponse(HttpStatusCode.OK, HospitalService.GetwithDoctor(id));
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
 
 
 

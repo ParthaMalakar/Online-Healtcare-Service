@@ -60,12 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\AppointmentDTO.cs" />
     <Compile Include="DTOs\BloodBankDTO.cs" />
     <Compile Include="DTOs\DoctorDTO.cs" />
     <Compile Include="DTOs\Donor_InfoDTO.cs" />
-    <Compile Include="DTOs\HospitalDoctorDTOs.cs" />
     <Compile Include="DTOs\HospitalDTO.cs" />
     <Compile Include="DTOs\PatientDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
