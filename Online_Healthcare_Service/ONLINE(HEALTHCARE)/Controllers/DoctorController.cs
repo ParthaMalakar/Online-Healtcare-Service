@@ -6,20 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace ONLINE_HEALTHCARE_.Controllers
 {
     public class DoctorController : ApiController
     {
-        [EnableCors("*","*","*")]
         [HttpGet]
         [Route("api/doctors")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = DoctorService.Get();
+                var data = DoctorService.Get().Take(10);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -28,7 +26,6 @@ namespace ONLINE_HEALTHCARE_.Controllers
             }
 
         }
-        [EnableCors("*", "*", "*")]
         [HttpGet]
         [Route("api/doctor/{id}")]
         public HttpResponseMessage Get(int id)
@@ -44,7 +41,6 @@ namespace ONLINE_HEALTHCARE_.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
         }
-        [EnableCors("*", "*", "*")]
         [Route("api/doctor/update")]
         [HttpPost]
         public HttpResponseMessage Update(DoctorDTO doctor)
@@ -61,7 +57,6 @@ namespace ONLINE_HEALTHCARE_.Controllers
             }
 
         }
-        [EnableCors("*", "*", "*")]
         [Route("api/doctor/delete/{id}")]
         [HttpPost]
         public HttpResponseMessage DeleteDoctor(int id)
