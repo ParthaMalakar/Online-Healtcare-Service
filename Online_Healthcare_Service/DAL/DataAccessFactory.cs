@@ -39,7 +39,16 @@ namespace DAL
         public static IRepo<Hospital, int, Hospital> HospitalDataAccess()
         {
             return new HospitalRepo();
+<<<<<<< HEAD
+        }
+        public static IAuth AuthDataAccess()
+        {
+            return new AdminRepo();
         }
 
+=======
+        }
+
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
     }
 }

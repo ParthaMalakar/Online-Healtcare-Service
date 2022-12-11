@@ -120,8 +120,11 @@
     <Compile Include="EF\Token_Patient.cs">
       <DependentUpon>Healthcare.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminRepo.cs" />
+    <Compile Include="Repos\AdminTokenRepo.cs" />
     <Compile Include="Repos\AppointmentRepo.cs" />
     <Compile Include="Repos\Blood_BankRepo.cs" />
     <Compile Include="Repos\DoctorRepo.cs" />
@@ -279,11 +282,8 @@
     <Compile Include="EF\Token_Patient.cs">
       <DependentUpon>Healthcare.tt</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repos\AdminRepo.cs" />
-    <Compile Include="Repos\AdminTokenRepo.cs" />
     <Compile Include="Repos\AppointmentRepo.cs" />
     <Compile Include="Repos\Blood_BankRepo.cs" />
     <Compile Include="Repos\DoctorRepo.cs" />
@@ -319,5 +319,5 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
->>>>>>> be1099a0d4368b0800598cb03fb2dbbd6447295a
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
 </Project>

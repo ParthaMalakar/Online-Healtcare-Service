@@ -4,7 +4,11 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
+<<<<<<< HEAD
+    <Schema Namespace="HealthcareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+=======
       <Schema Namespace="HealthcareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="Admin_Id" />
@@ -13,6 +17,10 @@
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="User_Type" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="nchar" MaxLength="10" />
+<<<<<<< HEAD
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+=======
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
         </EntityType>
         <EntityType Name="Ambulance">
           <Key>
@@ -292,8 +300,7 @@
             <End Role="Token_Patient" EntitySet="Token_Patient" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HealthcareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -306,6 +313,10 @@
           <Property Name="User_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Token_Admin" Relationship="Self.FK_Token_Admin" FromRole="Admin" ToRole="Token_Admin" />
+<<<<<<< HEAD
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+=======
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
         </EntityType>
         <EntityType Name="Ambulance">
           <Key>
@@ -611,6 +622,10 @@
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="HealthcareModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
+<<<<<<< HEAD
+                <ScalarProperty Name="Password" ColumnName="Password" />
+=======
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
                 <ScalarProperty Name="Admin_Id" ColumnName="Admin_Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="User_Type" ColumnName="User_Type" />
