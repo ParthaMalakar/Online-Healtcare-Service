@@ -56,3 +56,7 @@ C:\Users\HP\Downloads\Online-Healtcare-Service-main (1)\Online-Healtcare-Service
 C:\Users\HP\Downloads\Online-Healtcare-Service-main (1)\Online-Healtcare-Service-main\Online_Healthcare_Service\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\HP\Downloads\Online-Healtcare-Service-main (1)\Online-Healtcare-Service-main\Online_Healthcare_Service\DAL\obj\Debug\DAL.dll
 C:\Users\HP\Downloads\Online-Healtcare-Service-main (1)\Online-Healtcare-Service-main\Online_Healthcare_Service\DAL\obj\Debug\DAL.pdb
+C:\Users\HP\Documents\New folder (2)\Online_Healthcare_Service\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\New folder (2)\Online_Healthcare_Service\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\New folder (2)\Online_Healthcare_Service\DAL\obj\Debug\DAL.dll
+C:\Users\HP\Documents\New folder (2)\Online_Healthcare_Service\DAL\obj\Debug\DAL.pdb
