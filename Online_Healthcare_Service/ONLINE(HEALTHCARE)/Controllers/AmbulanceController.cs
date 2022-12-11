@@ -65,7 +65,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         [EnableCors("*", "*", "*")]
         [Route("api/Ambulance/Delete/{id}")]
         [HttpPost]
-        public HttpResponseMessage DeleteAppointment(int id)
+        public HttpResponseMessage DeleteAmbulance(int id)
         {
             var isDeleted = AmbulanceService.Delete(id);
 
@@ -79,7 +79,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
                     HttpStatusCode.BadRequest,
                     new
                     {
-                        Message = "Ambulance Delete unsuccessfully"
+                        Message = "Ambulance Delete unsuccessfull"
                     }
                 );
         }

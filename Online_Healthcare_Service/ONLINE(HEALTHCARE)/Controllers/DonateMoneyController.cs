@@ -1,9 +1,12 @@
-﻿using System;
+﻿using BLL.DTOs;
+using BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ONLINE_HEALTHCARE_.Controllers
 {
@@ -11,12 +14,12 @@ namespace ONLINE_HEALTHCARE_.Controllers
     {
         [EnableCors("*", "*", "*")]
         [HttpGet]
-        [Route("api/Ambulances")]
+        [Route("api/DonateMoney")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = AmbulanceService.Get().Take(10);
+                var data = DonateMoneyService.Get().Take(10);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -27,30 +30,31 @@ namespace ONLINE_HEALTHCARE_.Controllers
         }
         [EnableCors("*", "*", "*")]
         [HttpGet]
-        [Route("api/Ambulance/{id}")]
+        [Route("api/Transaction/{id}")]
         public HttpResponseMessage Get(int id)
         {
-            var data = AmbulanceService.Get(id);
+            var data = DonateMoneyService.Get(id);
+
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
         [EnableCors("*", "*", "*")]
-        [Route("api/Ambulance/add")]
+        [Route("api/Transaction/add")]
         [HttpPost]
-        public HttpResponseMessage Add(AmbulanceDTO obj)
+        public HttpResponseMessage Add(DonateMoneyDTO obj)
         {
-            var data = AmbulanceService.Add(obj);
+            var data = DonateMoneyService.Add(obj);
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
         }
         [EnableCors("*", "*", "*")]
-        [Route("api/Ambulance/update")]
+        [Route("api/Transaction/update")]
         [HttpPost]
-        public HttpResponseMessage Update(AmbulanceDTO Ambulance)
+        public HttpResponseMessage Update(DonateMoneyDTO Transaction)
         {
 
             try
             {
-                var isUpdated = AmbulanceService.Update(Ambulance);
+                var isUpdated = DonateMoneyService.Update(Transaction);
                 return Request.CreateResponse(HttpStatusCode.OK, isUpdated);
             }
             catch (Exception ex)
@@ -60,23 +64,23 @@ namespace ONLINE_HEALTHCARE_.Controllers
 
         }
         [EnableCors("*", "*", "*")]
-        [Route("api/Ambulance/Delete/{id}")]
+        [Route("api/Transaction/Delete/{id}")]
         [HttpPost]
-        public HttpResponseMessage DeleteAppointment(int id)
+        public HttpResponseMessage DeleteTransaction(int id)
         {
-            var isDeleted = AmbulanceService.Delete(id);
+            var isDeleted = DonateMoneyService.Delete(id);
 
             return isDeleted ? Request.CreateResponse(
                     HttpStatusCode.OK,
                     new
                     {
-                        Message = "Ambulance Deleted successfully"
+                        Message = "Transaction Deleted successfully"
                     }
                 ) : Request.CreateResponse(
                     HttpStatusCode.BadRequest,
                     new
                     {
-                        Message = "Ambulance Delete unsuccessfully"
+                        Message = "Transaction Delete unsuccessfull"
                     }
                 );
         }
