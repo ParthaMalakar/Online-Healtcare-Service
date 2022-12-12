@@ -8,6 +8,10 @@
     <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="User_Type" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Email" Type="nchar" MaxLength="10" />
+<<<<<<< HEAD
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+=======
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
   </EntityType>
   <EntityType Name="Ambulance">
     <Key>

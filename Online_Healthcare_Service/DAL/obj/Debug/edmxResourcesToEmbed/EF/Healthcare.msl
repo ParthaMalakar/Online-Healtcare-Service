@@ -4,6 +4,10 @@
     <EntitySetMapping Name="Admins">
       <EntityTypeMapping TypeName="HealthcareModel.Admin">
         <MappingFragment StoreEntitySet="Admin">
+<<<<<<< HEAD
+          <ScalarProperty Name="Password" ColumnName="Password" />
+=======
+>>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
           <ScalarProperty Name="Admin_Id" ColumnName="Admin_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="User_Type" ColumnName="User_Type" />

@@ -17,7 +17,6 @@ namespace DAL.EF
         public Doctor()
         {
             this.Appointments = new HashSet<Appointment>();
-            this.Prescriptions = new HashSet<Prescription>();
         }
     
         public int Id { get; set; }
@@ -29,6 +28,5 @@ namespace DAL.EF
     
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual Hospital Hospital { get; set; }
-        public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }
