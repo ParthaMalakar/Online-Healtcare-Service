@@ -8,18 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : IRepo<Admin, int, Admin>,IAuth
+    internal class PrescriptionRepo : IRepo<Prescription, int, Prescription>
     {
-
         HealthcareEntities db;
-        internal AdminRepo()
+        internal PrescriptionRepo()
         {
             db = new HealthcareEntities();
         }
-
-        public Admin Add(Admin obj)
+        public Prescription Add(Prescription obj)
         {
-            db.Admins.Add(obj);
+            db.Prescriptions.Add(obj);
             if (db.SaveChanges() > 0)
             {
                 return obj;
@@ -30,32 +28,26 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             var dbobj = Get(id);
-            db.Admins.Remove(dbobj);
+            db.Prescriptions.Remove(dbobj);
             return db.SaveChanges() > 0;
         }
 
-        public List<Admin> Get()
+        public List<Prescription> Get()
         {
-            return db.Admins.ToList();
+            return db.Prescriptions.ToList();
         }
 
-        public Admin Get(int id)
+        public Prescription Get(int id)
         {
-            return db.Admins.Find(id);
+            return db.Prescriptions.Find(id);
         }
 
-        public Admin Update(Admin obj)
+        public Prescription Update(Prescription obj)
         {
-            var dbobbj = db.Admins.Find(obj.Admin_Id);
+            var dbobbj = db.Prescriptions.Find(obj.Id);
             db.Entry(dbobbj).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
-        }
-        public bool Authenticate(string uname, string pass)
-        {
-            var data = db.Admins.FirstOrDefault(u => u.Name.Equals(uname) && u.Password.Equals(pass));
-            if (data != null) return true;
-            return false;
         }
     }
 }

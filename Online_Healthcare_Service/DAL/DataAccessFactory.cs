@@ -39,16 +39,19 @@ namespace DAL
         public static IRepo<Hospital, int, Hospital> HospitalDataAccess()
         {
             return new HospitalRepo();
-<<<<<<< HEAD
         }
-        public static IAuth AuthDataAccess()
+        public static IRepo<Ambulance, int, Ambulance> AmbulanceDataAccess()
         {
-            return new AdminRepo();
+            return new AmbulanceRepo();
+        }
+        public static IRepo<Prescription, int, Prescription> PrescriptionDataAccess()
+        {
+            return new PrescriptionRepo();
+        }
+        public static IRepo<Donate_Money, int, Donate_Money> DonateMoneyDataAccess()
+        {
+            return new DonateMoneyRepo();
         }
 
-=======
-        }
-
->>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
     }
 }

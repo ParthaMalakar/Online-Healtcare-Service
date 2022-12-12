@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fbc80b3ce1ff44cf9afeb1d11ef52330" Name="Diagram1">
+        <EntityTypeShape EntityType="HealthcareModel.Admin" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Ambulance" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Appointment" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Blood_Bank" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Doctor" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Donar_Info" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Donate_Money" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Hospital" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Patient" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Prescription" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.sysdiagram" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Token_Admin" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthcareModel.Token_Patient" Width="1.5" PointX="8.25" PointY="13" IsExpanded="true" />
+        <AssociationConnector Association="HealthcareModel.FK_Token_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Ambulance_Ambulance" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Appointment_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Appointment_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Blood_Bank_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Donar_Info_Blood_Bank" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Doctor_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Prescriptions_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Prescriptions_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Prescriptions_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthcareModel.FK_Token_Patient_Patient" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -33,8 +33,8 @@ namespace DAL.EF
         public DbSet<Donar_Info> Donar_Info { get; set; }
         public DbSet<Donate_Money> Donate_Money { get; set; }
         public DbSet<Hospital> Hospitals { get; set; }
-        public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Prescription> Prescriptions { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<Token_Admin> Token_Admin { get; set; }
         public DbSet<Token_Patient> Token_Patient { get; set; }

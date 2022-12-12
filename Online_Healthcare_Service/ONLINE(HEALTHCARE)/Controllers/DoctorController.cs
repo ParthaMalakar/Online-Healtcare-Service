@@ -6,13 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-<<<<<<< HEAD
 using System.Web.Http.Cors;
 
-=======
-using System.Web.Http.Cors;
-
->>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
 namespace ONLINE_HEALTHCARE_.Controllers
 {
     public class DoctorController : ApiController
