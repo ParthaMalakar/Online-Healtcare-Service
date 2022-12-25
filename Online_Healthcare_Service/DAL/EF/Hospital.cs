@@ -16,19 +16,17 @@ namespace DAL.EF
     {
         public Hospital()
         {
-            this.Ambulances = new HashSet<Ambulance>();
             this.Blood_Bank = new HashSet<Blood_Bank>();
             this.Doctors = new HashSet<Doctor>();
-            this.Medicines = new HashSet<Medicine>();
+            this.Prescriptions = new HashSet<Prescription>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
     
-        public virtual ICollection<Ambulance> Ambulances { get; set; }
         public virtual ICollection<Blood_Bank> Blood_Bank { get; set; }
         public virtual ICollection<Doctor> Doctors { get; set; }
-        public virtual ICollection<Medicine> Medicines { get; set; }
+        public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }

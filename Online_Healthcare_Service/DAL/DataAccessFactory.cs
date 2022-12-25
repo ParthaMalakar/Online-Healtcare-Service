@@ -13,6 +13,7 @@ namespace DAL
 {
     public class DataAccessFactory
     {
+
         public static IRepo<Doctor, int, Doctor> DoctorDataAccess()
         {
             return new DoctorRepo();
@@ -21,6 +22,10 @@ namespace DAL
         {
             return new PatientRepo();
         }
+        public static IBlockPatient<Patient, int> BlockpatientDataAccess()
+            {
+            return new BlockPatient();
+             }
         public static IRepo<Appointment, int, Appointment> AppointmentDataAccess()
         {
             return new AppointmentRepo();
@@ -35,20 +40,80 @@ namespace DAL
         {
             return new Blood_BankRepo();
         }
-
+        public static IRepo<PatientFeedback, int, PatientFeedback> PatientFeedbackDataAccess()
+        {
+            return new PatientFeedbackRepo();
+        }
         public static IRepo<Hospital, int, Hospital> HospitalDataAccess()
         {
             return new HospitalRepo();
-<<<<<<< HEAD
         }
-        public static IAuth AuthDataAccess()
+
+        public static IGet<Appointment, int> AppointmentIdDataAccess()
+        {
+            return new AppointmentRepo();
+        }
+
+       
+        public static IGet<Prescription, int> PrescriptionIdDataAccess()
+        {
+            return new PrescriptionRepo();
+        }
+        public static IGet<Ambulance, int> AmbulanceIdDataAccess()
+        {
+            return new AmbulanceRepo();
+        }
+
+        public static IRepo<Prescription, int, Prescription> PrescriptionDataAccess()
+        {
+            return new PrescriptionRepo();
+        }
+
+        public static IRepo<Ambulance, int,Ambulance> AmbulanceDataAccess()
+        {
+            return new AmbulanceRepo();
+        }
+
+        public static IRepo<Donate_Money, int, Donate_Money> DonateMoneyDataAccess()
+        {
+            return new DonateMoneyRepo();
+        }
+        public static IRepo<Admin, int, Admin> AdminDataAccess()
         {
             return new AdminRepo();
         }
-
-=======
+        public static IRepo<User_Table, int, User_Table> UserDataAccess()
+        {
+            return new UserRepo();
+        }
+        public static IRepo<Token, string, Token> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
+        public static IAuth AuthDataAccess()
+        {
+            return new AuthRepo();
+        }
+        public static IRepo_Admin<AdminReport, int> ReportDataAccess()
+        {
+            return new AdminReportRepo();
         }
 
->>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
+        public static IReport<AdminReport, String> ReportgetSRDataAccess()
+        {
+            return new AdminReportRepo();
+        }
+        public static IGetbyemailI<int, String> GetbyemailDataAccess()
+        {
+            return new PatientRepo();
+        }
+       public static IAssignDonar<Donar_Info, int> assignDoctorDataAccess()
+        {
+            return new AssignDonarRepo();
+        }
+        public static IAssignDonar<Blood_Bank, int> requestbloodDataAccess()
+        {
+            return new Blood_BankRepo();
+        }
     }
 }

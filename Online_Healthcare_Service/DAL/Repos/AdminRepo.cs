@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : IRepo<Admin, int, Admin>,IAuth
+    internal class AdminRepo : IRepo<Admin, int, Admin> 
     {
 
-        HealthcareEntities db;
+        HealthcareEntities1 db;
         internal AdminRepo()
         {
-            db = new HealthcareEntities();
+            db = new HealthcareEntities1();
         }
 
         public Admin Add(Admin obj)

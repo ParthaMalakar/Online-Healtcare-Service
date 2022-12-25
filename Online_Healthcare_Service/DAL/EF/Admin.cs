@@ -14,20 +14,10 @@ namespace DAL.EF
     
     public partial class Admin
     {
-        public Admin()
-        {
-            this.Token_Admin = new HashSet<Token_Admin>();
-        }
-    
         public int Admin_Id { get; set; }
         public string Name { get; set; }
         public string User_Type { get; set; }
         public string Email { get; set; }
-<<<<<<< HEAD
         public string Password { get; set; }
-=======
->>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
-    
-        public virtual ICollection<Token_Admin> Token_Admin { get; set; }
     }
 }

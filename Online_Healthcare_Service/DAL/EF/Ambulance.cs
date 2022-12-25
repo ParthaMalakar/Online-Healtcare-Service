@@ -20,7 +20,9 @@ namespace DAL.EF
         public string Rent { get; set; }
         public string Status { get; set; }
         public int Hid { get; set; }
+        public Nullable<int> Pid { get; set; }
+        public string Location { get; set; }
     
-        public virtual Hospital Hospital { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

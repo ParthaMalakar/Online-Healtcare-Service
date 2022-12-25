@@ -1,18 +1,14 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using ONLINE_HEALTHCARE_.AuthFilters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-<<<<<<< HEAD
 using System.Web.Http.Cors;
 
-=======
-using System.Web.Http.Cors;
-
->>>>>>> a133cd17e395f848acaf5a831722b042a4bed745
 namespace ONLINE_HEALTHCARE_.Controllers
 {
     public class DoctorController : ApiController
@@ -20,6 +16,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         [EnableCors("*","*","*")]
         [HttpGet]
         [Route("api/doctors")]
+        [Logged]
         public HttpResponseMessage Get()
         {
             try
@@ -36,6 +33,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         [EnableCors("*", "*", "*")]
         [HttpGet]
         [Route("api/doctor/{id}")]
+        [Logged]
         public HttpResponseMessage Get(int id)
         {
             var data = DoctorService.Get(id);
@@ -43,6 +41,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         }
         [Route("api/doctor/add")]
         [HttpPost]
+        [Logged]
         public HttpResponseMessage Add(DoctorDTO obj)
         {
             var data = DoctorService.Add(obj);
@@ -52,6 +51,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         [EnableCors("*", "*", "*")]
         [Route("api/doctor/update")]
         [HttpPost]
+        [Logged]
         public HttpResponseMessage Update(DoctorDTO doctor)
         {
             
@@ -69,6 +69,7 @@ namespace ONLINE_HEALTHCARE_.Controllers
         [EnableCors("*", "*", "*")]
         [Route("api/doctor/delete/{id}")]
         [HttpPost]
+        [Logged]
         public HttpResponseMessage DeleteDoctor(int id)
         {
             var isDeleted = DoctorService.Delete(id);

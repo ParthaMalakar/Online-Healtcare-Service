@@ -16,8 +16,9 @@ namespace DAL.EF
     {
         public Patient()
         {
+            this.Ambulances = new HashSet<Ambulance>();
             this.Appointments = new HashSet<Appointment>();
-            this.Token_Patient = new HashSet<Token_Patient>();
+            this.Prescriptions = new HashSet<Prescription>();
         }
     
         public int Id { get; set; }
@@ -29,7 +30,8 @@ namespace DAL.EF
         public string password { get; set; }
         public string Email { get; set; }
     
+        public virtual ICollection<Ambulance> Ambulances { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
-        public virtual ICollection<Token_Patient> Token_Patient { get; set; }
+        public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }

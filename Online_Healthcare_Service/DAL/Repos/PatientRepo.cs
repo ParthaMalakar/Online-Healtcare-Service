@@ -3,17 +3,18 @@ using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class PatientRepo : IRepo<Patient, int, Patient>
+    internal class PatientRepo : IRepo<Patient, int, Patient>,IGetbyemailI<int, string>
     {
-        HealthcareEntities db;
+        HealthcareEntities1 db;
         internal PatientRepo()
         {
-            db = new HealthcareEntities();
+            db = new HealthcareEntities1();
         }
         public Patient Add(Patient obj)
         {
@@ -48,6 +49,13 @@ namespace DAL.Repos
             db.Entry(dbobbj).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
+        }
+
+        public int GetByEmail(string id)
+        {
+            var data = (from a in db.Patients where a.Email == id select a).SingleOrDefault();
+            
+            return data.Id;
         }
     }
 }
